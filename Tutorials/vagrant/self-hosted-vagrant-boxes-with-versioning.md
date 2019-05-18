@@ -135,6 +135,14 @@ $ sudo nano /etc/ssh/sshd_config
 # Add the following line at the end of the file:
 UseDNS no
 ```
+ * Remove any references to HWADDR from the ifcfg files
+ 
+```bash
+$ sudo vim /etc/sysconfig/network-scripts/ifcfg-eth0 
+$ sudo vim /etc/sysconfig/network-scripts/ifcfg-eth1
+...
+# Remove HWADDR lines
+```
 
  * **Important:** Install the VirtualBox Guest Additions __with the proper version__
  
